@@ -1,0 +1,207 @@
+/* Root container */
+#root {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* General App container */
+.app-container {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7fa;
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+
+/* Chat card container */
+.chat-card {
+  background-color: #f5f2f2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Left and Right sections within chat card */
+.leftbox {
+  width: 100%;
+}
+
+.rightbox {
+  width: 100%;
+  padding-left: 20px; /* Add some space between left and right */
+}
+
+/* Chat header */
+.chat-header {
+  font-size: 24px;
+  color: #4a90e2;
+  margin-bottom: 20px;
+}
+
+/* Textarea styling */
+.input-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: none;
+  height: 120px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+.generate-button {
+  background-color: #090979;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  width: 100%;
+}
+
+.generate-button:hover {
+  background-color: #357ab7;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4a90e2;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Answer container styling */
+.answer-container {
+  width: 95%;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  height: fit-content;
+  color: #000;
+  padding: 10px;
+}
+
+/* History styling */
+.history-container {
+  color: #000;
+}
+
+.history-container ol li {
+  text-align: left;
+}
+
+/* Textarea placeholder color */
+textarea::placeholder {
+  color: #aaa;
+}
+
+/* Responsive Design */
+
+/* For small screens (mobile devices) */
+@media screen and (max-width: 480px) {
+  .chat-card {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .generate-button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .input-textarea {
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .chat-header {
+    font-size: 20px;
+  }
+
+  .rightbox {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* For tablets (medium screens) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .chat-card {
+    width: 90%;
+  }
+
+  .app-container {
+    padding: 1rem;
+  }
+
+  .rightbox {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+/* For larger screens */
+@media screen and (min-width: 769px) {
+  .chat-card {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    max-width: 800px;
+  }
+
+  .leftbox {
+    width: 60%;
+  }
+
+  .rightbox {
+    width: 40%;
+  }
+}
+
+/* Footer styling */
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #090979;
+  color: white;
+}
+
+#foot a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#foot a:hover {
+  text-decoration: underline;
+}
